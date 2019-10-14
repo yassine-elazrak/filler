@@ -6,7 +6,7 @@
 /*   By: yelazrak <yelazrak@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/07 20:12:57 by yelazrak          #+#    #+#             */
-/*   Updated: 2019/10/08 12:05:27 by yelazrak         ###   ########.fr       */
+/*   Updated: 2019/10/13 19:03:38 by yelazrak         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ void    ft_init_00(t_init *init, t_filler *filler)
 
     i = filler->y > filler->x ? filler->y : filler->x;
     init->a = 900 / i;
-    init->w = filler->x * init->a +filler->x ;
+    init->w = filler->x * init->a + filler->x ;
      init->h = (filler->y) * init->a + (filler->y) + 200 ;
      printf("a = [%d]       i = [%d]\n",init->a, i);
 

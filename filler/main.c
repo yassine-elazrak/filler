@@ -6,7 +6,7 @@
 /*   By: yelazrak <yelazrak@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/05 13:14:44 by yelazrak          #+#    #+#             */
-/*   Updated: 2019/10/12 13:15:06 by yelazrak         ###   ########.fr       */
+/*   Updated: 2019/10/12 17:13:56 by yelazrak         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -82,8 +82,6 @@ int  ft_read( t_filler *filler)
    
           filler->lst = NULL;       
           filler->score = -1;   
-          // filler->p_1 = -1;
-          // filler->p_2 = -2;
           filler->piece = NULL;
           while ((i = get_next_line(0,&line)))
           {

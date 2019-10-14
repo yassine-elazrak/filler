@@ -6,7 +6,7 @@
 /*   By: yelazrak <yelazrak@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/06 08:34:35 by yelazrak          #+#    #+#             */
-/*   Updated: 2019/10/12 13:12:39 by yelazrak         ###   ########.fr       */
+/*   Updated: 2019/10/12 17:09:24 by yelazrak         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,15 +36,7 @@ void        ft_print(int **str ,int y ,int x)
 
 
 
-//  if ((tmp->x + x < 0))
-//             return (-1); 
-//         if(tmp->x + x >= filler->x)
-//             return (-1); 
-//         if(tmp->y + y <  0)
-//             return (-1); 
-//         if (tmp->y + y >= filler->y)
-//             return (-1); 
-      
+    
 int     ft_put_piece(t_filler *filler, int x,int y)
 {
     t_point     *tmp;
