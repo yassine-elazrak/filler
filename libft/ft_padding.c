@@ -3,16 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   ft_padding.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mobouzar <mobouzar@student.42.fr>          +#+  +:+       +#+        */
+/*   By: yelazrak <yelazrak@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/08/04 23:08:04 by mobouzar          #+#    #+#             */
-/*   Updated: 2019/09/17 16:59:23 by mobouzar         ###   ########.fr       */
+/*   Updated: 2019/09/20 17:44:05 by yelazrak         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-static char		*ft_join_char(t_init *lst, char *str, int i)
+static char		*ft_join_char(t_int *lst, char *str, int i)
 {
 	char		*tmp;
 	char		*sign;
@@ -23,7 +23,7 @@ static char		*ft_join_char(t_init *lst, char *str, int i)
 		return (0);
 	tmp = NULL;
 	tmp = str;
-	str = ft_check(lst, str, &sign);
+	str = ft_ch_ck(lst, str, &sign);
 	if ((lst->flag & PLUS) == PLUS && tmp[0] != '-' && lst->specifier != 'u')
 		*sign = '+';
 	else if ((lst->flag & SPACE) == SPACE && tmp[0] != '-' &&
@@ -38,7 +38,7 @@ static char		*ft_join_char(t_init *lst, char *str, int i)
 	return (str);
 }
 
-static char		*ft_precision_helper(t_init *lst, char *str, int str_len)
+static char		*ft_precision_helper(t_int *lst, char *str, int str_len)
 {
 	int i;
 
@@ -54,7 +54,7 @@ static char		*ft_precision_helper(t_init *lst, char *str, int str_len)
 	return (str);
 }
 
-static char		*ft_manage_precision(t_init *lst, char *str)
+static char		*ft_manage_precision(t_int *lst, char *str)
 {
 	const int	str_len = ft_strlen(str);
 	char		*tmp;
@@ -77,7 +77,7 @@ static char		*ft_manage_precision(t_init *lst, char *str)
 	return (str);
 }
 
-char			*ft_manage_width(t_init *lst, char *s)
+char			*ft_manage_width(t_int *lst, char *s)
 {
 	int			str_len;
 	char		*str;

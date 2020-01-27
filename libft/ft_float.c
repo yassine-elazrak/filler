@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_float.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mobouzar <mobouzar@student.42.fr>          +#+  +:+       +#+        */
+/*   By: yelazrak <yelazrak@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/08/06 14:23:50 by mobouzar          #+#    #+#             */
-/*   Updated: 2019/09/17 15:36:21 by mobouzar         ###   ########.fr       */
+/*   Updated: 2019/09/20 17:38:35 by yelazrak         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 char		*ft_mantissa(t_data *lst)
 {
-	t_var	var;
+	t_vr	var;
 	char	*tmp;
 	int		i;
 
@@ -36,7 +36,7 @@ char		*ft_mantissa(t_data *lst)
 	return (var.result);
 }
 
-char		*ft_putstr_float(char *src, char *dst, char *tmp, t_init *lst)
+char		*ft_putstr_float(char *src, char *dst, char *tmp, t_int *lst)
 {
 	int		a;
 	int		len;
@@ -58,7 +58,7 @@ char		*ft_putstr_float(char *src, char *dst, char *tmp, t_init *lst)
 	return (src);
 }
 
-char		*ft_get_vurgile(char *str, int e, int prs, t_init *lst)
+char		*ft_get_vurgile(char *str, int e, int prs, t_int *lst)
 {
 	const int	i = ft_strlen(str) - 63;
 	char		*tmp_2;
@@ -86,7 +86,7 @@ char		*ft_get_vurgile(char *str, int e, int prs, t_init *lst)
 	return (ret);
 }
 
-char		*ft_exponent(t_data *list, int prs, t_init *lst)
+char		*ft_exponent(t_data *list, int prs, t_int *lst)
 {
 	char	*str;
 	char	*tmp;

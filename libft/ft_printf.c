@@ -3,16 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   ft_printf.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mobouzar <mobouzar@student.42.fr>          +#+  +:+       +#+        */
+/*   By: yelazrak <yelazrak@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/06/25 14:46:40 by mobouzar          #+#    #+#             */
-/*   Updated: 2019/09/16 23:13:27 by mobouzar         ###   ########.fr       */
+/*   Updated: 2019/09/20 17:35:27 by yelazrak         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-void	ft_init(t_init *lst)
+void	ft_int(t_int *lst)
 {
 	lst->precision = -1;
 	lst->flag = 0;
@@ -20,7 +20,7 @@ void	ft_init(t_init *lst)
 	lst->specifier = '\0';
 }
 
-int		ft_manage_format(va_list list, t_init *lst)
+int		ft_manage_format(va_list list, t_int *lst)
 {
 	int	ret;
 
@@ -47,7 +47,7 @@ int		ft_manage_format(va_list list, t_init *lst)
 	return (ret);
 }
 
-int		ft_print_format(va_list list, const char *format, t_init *f)
+int		ft_print_format(va_list list, const char *format, t_int *f)
 {
 	int		i;
 	int		j;
@@ -74,7 +74,7 @@ int		ft_print_format(va_list list, const char *format, t_init *f)
 int		ft_printf(const char *format, ...)
 {
 	va_list		list;
-	t_init		lst;
+	t_int		lst;
 	int			ret;
 
 	va_start(list, format);

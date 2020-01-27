@@ -6,7 +6,7 @@
 /*   By: yelazrak <yelazrak@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/03/30 15:20:56 by yelazrak          #+#    #+#             */
-/*   Updated: 2019/09/20 16:28:49 by yelazrak         ###   ########.fr       */
+/*   Updated: 2019/11/23 04:46:01 by oherba           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,7 +39,7 @@ static char		*ft_rempli(char *t, int i, long long int r, int x)
 	return (t);
 }
 
-char			*ft_itoa(long long int  a)
+char			*ft_itoa(long long int a)
 {
 	char			*t;
 	int				i;

@@ -3,16 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   ft_get_flag.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mobouzar <mobouzar@student.42.fr>          +#+  +:+       +#+        */
+/*   By: yelazrak <yelazrak@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/08/04 19:41:51 by mobouzar          #+#    #+#             */
-/*   Updated: 2019/09/17 18:49:04 by mobouzar         ###   ########.fr       */
+/*   Updated: 2019/09/20 17:37:17 by yelazrak         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-static int		ft_flag(t_init *lst, const char *format)
+static int		ft_flag(t_int *lst, const char *format)
 {
 	int	i;
 
@@ -39,7 +39,7 @@ static int		ft_flag(t_init *lst, const char *format)
 	return (i);
 }
 
-static int		ft_width(t_init *lst, const char *format, int i)
+static int		ft_width(t_int *lst, const char *format, int i)
 {
 	int	j;
 
@@ -50,7 +50,7 @@ static int		ft_width(t_init *lst, const char *format, int i)
 	return (j);
 }
 
-static int		ft_precision(t_init *lst, const char *format, int i)
+static int		ft_precision(t_int *lst, const char *format, int i)
 {
 	int		j;
 	char	*tmp;
@@ -72,7 +72,7 @@ static int		ft_precision(t_init *lst, const char *format, int i)
 	return (j);
 }
 
-static void		ft_modifier(t_init *lst, const char *format, int i)
+static void		ft_modifier(t_int *lst, const char *format, int i)
 {
 	while (ft_strchr("lhL", format[i]))
 	{
@@ -90,13 +90,13 @@ static void		ft_modifier(t_init *lst, const char *format, int i)
 	}
 }
 
-int				ft_get_flag_of_format(t_init *lst, const char *format)
+int				ft_get_flag_of_format(t_int *lst, const char *format)
 {
 	int i;
 	int	a;
 
 	i = 1;
-	ft_init(lst);
+	ft_int(lst);
 	while (format[i])
 	{
 		if (!ft_strchr("0-+#.hlL ", format[i])

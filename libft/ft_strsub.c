@@ -6,7 +6,7 @@
 /*   By: yelazrak <yelazrak@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/03/30 14:14:22 by yelazrak          #+#    #+#             */
-/*   Updated: 2019/08/04 18:23:49 by yelazrak         ###   ########.fr       */
+/*   Updated: 2019/10/08 18:13:03 by yelazrak         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ char		*ft_strsub(char const *s, unsigned int start, size_t len)
 
 	if (!s)
 		return (NULL);
-	if (start == ft_strlen(s))
+	if ((int)start == ft_strlen(s))
 		return (ft_strdup(""));
 	if (!(t = ft_strnew(len)))
 		return (NULL);

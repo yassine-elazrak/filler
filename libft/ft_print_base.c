@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_print_base.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mobouzar <mobouzar@student.42.fr>          +#+  +:+       +#+        */
+/*   By: yelazrak <yelazrak@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/08/05 04:18:22 by mobouzar          #+#    #+#             */
-/*   Updated: 2019/08/09 16:54:19 by mobouzar         ###   ########.fr       */
+/*   Updated: 2019/09/20 17:35:05 by yelazrak         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ static char		*add(char **tmp, char *str)
 	return (str);
 }
 
-static int		ft_print(t_init *lst, unsigned long long int nbr)
+static int		ft_print(t_int *lst, unsigned long long int nbr)
 {
 	int		len;
 	char	*str;
@@ -47,7 +47,7 @@ static int		ft_print(t_init *lst, unsigned long long int nbr)
 	return (len);
 }
 
-int				ft_print_base(va_list list, t_init *lst)
+int				ft_print_base(va_list list, t_int *lst)
 {
 	unsigned long long int	nbr;
 	int						len;

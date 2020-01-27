@@ -3,16 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   ft_float2.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mobouzar <mobouzar@student.42.fr>          +#+  +:+       +#+        */
+/*   By: yelazrak <yelazrak@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/16 16:40:42 by mobouzar          #+#    #+#             */
-/*   Updated: 2019/09/17 15:42:34 by mobouzar         ###   ########.fr       */
+/*   Updated: 2019/09/20 17:43:40 by yelazrak         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-static void		ft_check_helper(char **part_e, int prs)
+static void		ft_ch_ck_helper(char **part_e, int prs)
 {
 	char	*str;
 
@@ -29,7 +29,7 @@ static void		ft_check_helper(char **part_e, int prs)
 	}
 }
 
-static void		ft_check_rounding(char **str, char **part_e, int prs)
+static void		ft_ch_ck_rounding(char **str, char **part_e, int prs)
 {
 	int		i;
 	char	*dst;
@@ -41,10 +41,10 @@ static void		ft_check_rounding(char **str, char **part_e, int prs)
 	if (i < 63)
 		*part_e = ft_safe(*part_e, ft_sum(*part_e, "1"));
 	else
-		ft_check_helper(part_e, prs);
+		ft_ch_ck_helper(part_e, prs);
 }
 
-char			*ft_rounding(char *srcs, char *dst, t_init *lst, int prs)
+char			*ft_rounding(char *srcs, char *dst, t_int *lst, int prs)
 {
 	char	*tmp;
 	char	*tmp_3;
@@ -60,9 +60,9 @@ char			*ft_rounding(char *srcs, char *dst, t_init *lst, int prs)
 		ft_strdel(&tmp_3);
 	}
 	else if ((I(dst[prs]) == 5) && prs > 0)
-		ft_check_rounding(&dst, &tmp, prs);
+		ft_ch_ck_rounding(&dst, &tmp, prs);
 	else if ((I(dst[prs]) == 5) && prs == 0)
-		ft_check_rounding(&dst, &srcs, prs);
+		ft_ch_ck_rounding(&dst, &srcs, prs);
 	if ((int)ft_strlen(tmp) > prs && prs > 0)
 	{
 		tmp_3 = ft_strsub(tmp, 0, 1);

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_operation.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mobouzar <mobouzar@student.42.fr>          +#+  +:+       +#+        */
+/*   By: yelazrak <yelazrak@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/08/06 09:18:54 by mobouzar          #+#    #+#             */
-/*   Updated: 2019/09/17 15:20:47 by mobouzar         ###   ########.fr       */
+/*   Updated: 2019/09/20 17:39:12 by yelazrak         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 char			*ft_sum(char *a, char *b)
 {
-	t_var	var;
+	t_vr	var;
 	int		i;
 
 	i = -1;
@@ -40,9 +40,9 @@ char			*ft_sum(char *a, char *b)
 	return (var.result);
 }
 
-static void		ft_produit_helper(t_var *lst, char *a, char *b)
+static void		ft_produit_helper(t_vr *lst, char *a, char *b)
 {
-	t_var	*var;
+	t_vr	*var;
 
 	var = lst;
 	var->s_a = ft_strlen(a);
@@ -53,7 +53,7 @@ static void		ft_produit_helper(t_var *lst, char *a, char *b)
 
 char			*ft_produit(char *a, char *b)
 {
-	t_var	var;
+	t_vr	var;
 	int		prd;
 
 	ft_produit_helper(&var, a, b);

@@ -6,40 +6,33 @@
 #    By: yelazrak <yelazrak@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/06/26 18:43:13 by yelazrak          #+#    #+#              #
-#    Updated: 2020/01/27 14:34:38 by yelazrak         ###   ########.fr        #
+#    Updated: 2020/01/27 17:45:29 by yelazrak         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = yelazrak.filler
 
-c_srcs = ft_flood.c \
-		 ft_get_.c \
-		 ft_read_.c \
-		 main.c \
+c_srcs = ft_flood.o \
+		 ft_get_.o \
+		 ft_read_.o \
+		 main.o \
 
-objs = $(c_srcs:.c=.o)
 INCLUDES = .
-
-FLAGS = -g -Wall -Wextra -Werror
-
+CFLAGS = -Wall -Wextra -Werror
+CC=gcc
 all: libft_ $(NAME)
 
 libft_:
 	@make -C libft
 
-$(NAME): $(objs) $(INCLUDES)/filler.h libft/libft.a
-	gcc -o $(NAME) $(FLAGS) $(objs) -L ./libft -lft -I $(INCLUDES)
-
-$(objs): %.o : %.c 
-	gcc  $(FLAGS) -c $< -o $@   -I $(INCLUDES)
+$(NAME): $(c_srcs) $(INCLUDES)/filler.h libft/libft.a
+	gcc -o $(NAME) $(FLAGS) $(c_srcs) -L ./libft -lft -I $(INCLUDES)
 clean:
 	@make clean -C libft
-	@rm -rf $(objs)
+	@rm -rf $(c_srcs)
 
 fclean: clean
 	@make fclean -C libft
 	@rm -rf $(NAME)
 
 re: fclean all
-
-

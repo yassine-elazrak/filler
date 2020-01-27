@@ -3,16 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   ft_print_d.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mobouzar <mobouzar@student.42.fr>          +#+  +:+       +#+        */
+/*   By: yelazrak <yelazrak@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/08/05 01:35:10 by mobouzar          #+#    #+#             */
-/*   Updated: 2019/08/09 16:52:33 by mobouzar         ###   ########.fr       */
+/*   Updated: 2019/09/20 17:35:15 by yelazrak         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-int		ft_print_d(va_list list, t_init *lst)
+int		ft_print_d(va_list list, t_int *lst)
 {
 	long long int	nbr;
 	char			*str;
