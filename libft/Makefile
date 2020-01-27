@@ -6,7 +6,7 @@
 #    By: yelazrak <yelazrak@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/04/01 11:31:32 by yelazrak          #+#    #+#              #
-#    Updated: 2019/09/20 17:53:03 by yelazrak         ###   ########.fr        #
+#    Updated: 2019/09/20 16:48:03 by yelazrak         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -113,7 +113,7 @@ $(NAME): $(OBJS)   $(INCLUDE)
 	@ranlib $(NAME)
 
 $(OBJS): %.o : %.c $(INCLUDES)/libft.h
-	@gcc -c $< -o $@ $(FLAGS) -I $(INCLUDES)
+	gcc -c $< -o $@ $(FLAGS) -I $(INCLUDES)
 
 clean:
 	@rm -f $(OBJS)

@@ -6,7 +6,7 @@
 /*   By: yelazrak <yelazrak@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/04/13 09:29:03 by yelazrak          #+#    #+#             */
-/*   Updated: 2019/05/25 19:05:54 by yelazrak         ###   ########.fr       */
+/*   Updated: 2019/10/08 16:38:16 by yelazrak         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@
 # include <unistd.h>
 # include <stdio.h>
 
-# define BUFF_SIZE 12
+# define BUFF_SIZE 1
 
 typedef struct		s_line
 {

@@ -3,16 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   ft_print_char.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: yelazrak <yelazrak@student.42.fr>          +#+  +:+       +#+        */
+/*   By: mobouzar <mobouzar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/08/05 08:27:31 by mobouzar          #+#    #+#             */
-/*   Updated: 2019/09/20 17:35:10 by yelazrak         ###   ########.fr       */
+/*   Updated: 2019/08/09 16:57:27 by mobouzar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-static char		*ft_width(t_int *lst, char *str)
+static char		*ft_width(t_init *lst, char *str)
 {
 	int		str_len;
 	char	*tmp;
@@ -36,7 +36,7 @@ static char		*ft_width(t_int *lst, char *str)
 	return (str);
 }
 
-int				ft_print_s(va_list list, t_int *lst)
+int				ft_print_s(va_list list, t_init *lst)
 {
 	char	*str;
 	char	*tmp;
@@ -63,7 +63,7 @@ int				ft_print_s(va_list list, t_int *lst)
 	return (len);
 }
 
-int				ft_print_c(va_list list, t_int *lst)
+int				ft_print_c(va_list list, t_init *lst)
 {
 	char	c;
 	char	*str;
@@ -91,7 +91,7 @@ int				ft_print_c(va_list list, t_int *lst)
 	return (len);
 }
 
-int				ft_print_persent(t_int *lst)
+int				ft_print_persent(t_init *lst)
 {
 	int		len;
 	char	*str;

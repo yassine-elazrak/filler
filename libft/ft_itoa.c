@@ -6,15 +6,15 @@
 /*   By: yelazrak <yelazrak@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/03/30 15:20:56 by yelazrak          #+#    #+#             */
-/*   Updated: 2019/11/23 04:46:01 by oherba           ###   ########.fr       */
+/*   Updated: 2020/01/27 18:06:37 by yelazrak         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static int		len(long long int n)
+static int			len(long long int n)
 {
-	int i;
+	int				i;
 
 	i = 0;
 	while (n > 0)
@@ -25,9 +25,9 @@ static int		len(long long int n)
 	return (i);
 }
 
-static char		*ft_rempli(char *t, int i, long long int r, int x)
+static char			*ft_rempli(char *t, int i, long long int r, int x)
 {
-	long long int n;
+	long long int	n;
 
 	n = r;
 	i--;
@@ -39,7 +39,7 @@ static char		*ft_rempli(char *t, int i, long long int r, int x)
 	return (t);
 }
 
-char			*ft_itoa(long long int a)
+char				*ft_itoa(long long int a)
 {
 	char			*t;
 	int				i;

@@ -6,7 +6,7 @@
 /*   By: yelazrak <yelazrak@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/08/04 18:59:08 by mobouzar          #+#    #+#             */
-/*   Updated: 2019/09/20 17:43:29 by yelazrak         ###   ########.fr       */
+/*   Updated: 2019/09/20 16:12:26 by yelazrak         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,15 +34,15 @@
 # define I(x)	(x - '0')
 # define K(x)	(x + '0')
 
-typedef struct			s_int
+typedef struct			s_init
 {
 	short				flag;
 	char				specifier;
 	int					precision;
 	int					width;
-}						t_int;
+}						t_init;
 
-typedef struct			s_vr
+typedef struct			s_var
 {
 	int					s_a;
 	int					s_b;
@@ -57,7 +57,7 @@ typedef struct			s_vr
 	char				*tmp_2;
 	char				aa;
 	char				bb;
-}						t_vr;
+}						t_var;
 
 typedef struct			s_data
 {
@@ -73,33 +73,33 @@ typedef union			u_float
 	t_data				list;
 }						t_float;
 
-int						ft_print_d(va_list list, t_int *lst);
-int						ft_print_base(va_list list, t_int *lst);
-int						ft_print_s(va_list list, t_int *lst);
-int						ft_print_c(va_list list, t_int *lst);
-int						ft_print_f(va_list list, t_int *lst);
-int						ft_print_persent(t_int *lst);
-void					ft_int(t_int *lst);
+int						ft_print_d(va_list list, t_init *lst);
+int						ft_print_base(va_list list, t_init *lst);
+int						ft_print_s(va_list list, t_init *lst);
+int						ft_print_c(va_list list, t_init *lst);
+int						ft_print_f(va_list list, t_init *lst);
+int						ft_print_persent(t_init *lst);
+void					ft_init(t_init *lst);
 
 char					*ft_sum(char *a, char *b);
 char					*ft_produit(char *a, char *b);
 char					*ft_power(char *str, long n);
 char					*ft_putstr_float(char *src, char *dst, char *tmp,
-						t_int *lst);
-char					*ft_ch_ck(t_int *lst, char *str, char **tmp);
+						t_init *lst);
+char					*ft_check(t_init *lst, char *str, char **tmp);
 char					*ft_strjoin_00(char *dst, int i);
 
-char					*ft_exponent(t_data *lst, int prs, t_int *list);
-char					*ft_rounding(char *srcs, char *dst, t_int *lst,
+char					*ft_exponent(t_data *lst, int prs, t_init *list);
+char					*ft_rounding(char *srcs, char *dst, t_init *lst,
 						int prs);
 
 int						ft_printf(const char *format, ...);
 int						ft_print_format(va_list list, const char *format,
-						t_int *f);
+						t_init *f);
 char					*ft_push_c(char *str, int i, char *c, int ps);
 
-char					*ft_manage_width(t_int *lst, char *str);
-int						ft_get_flag_of_format(t_int *lst, const char *format);
+char					*ft_manage_width(t_init *lst, char *str);
+int						ft_get_flag_of_format(t_init *lst, const char *format);
 int						ft_char_nbr(char c);
 int						ft_str_nbr(char *str);
 

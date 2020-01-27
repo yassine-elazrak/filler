@@ -3,16 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   helper.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: yelazrak <yelazrak@student.42.fr>          +#+  +:+       +#+        */
+/*   By: mobouzar <mobouzar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/16 17:01:28 by mobouzar          #+#    #+#             */
-/*   Updated: 2019/09/20 17:52:42 by yelazrak         ###   ########.fr       */
+/*   Updated: 2019/09/17 14:42:34 by mobouzar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-static char		*ft_prefix(t_int *lst, char *str, char *sign)
+static char		*ft_prefix(t_init *lst, char *str, char *sign)
 {
 	if (str[0] == '0' && str[1] == 'x')
 	{
@@ -40,7 +40,7 @@ static char		*ft_prefix(t_int *lst, char *str, char *sign)
 	return (str);
 }
 
-char			*ft_ch_ck(t_int *lst, char *str, char **tmp)
+char			*ft_check(t_init *lst, char *str, char **tmp)
 {
 	char *sign;
 	char *new;
